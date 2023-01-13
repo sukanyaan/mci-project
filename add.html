@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+
+
+    <title>Employee Table</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="index.html" onclick="getData()">Our Employee</a></li>
+        <li><a href="add.html">New User</a></li>
+
+    </ul>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <form class="add-post-form" method="post" id="registration_form">
+                    <h2 class="text-success"><em>Add New Employee</em></h2>
+
+                    <div class="mb-3">
+                        <label for="createdBy">Created By</label><span class="red">*<small></small></span><br>
+
+                        <input type="text" id="createdBy" name="createdBy" placeholder="created" required/><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="updatedBy">Updated By</label><span class="red">*<small></small></span><br>
+                        <input type="text" id="updatedBy" name="updatedBy" placeholder="updated" required/><br>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="firstName">First Name</label><span class="red">*<small></small></span><br>
+                        <span class="error_form" id="fname_error_message"></span>
+                        <input type="text" id="firstName" name="firstName" placeholder="firstname" required/><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lastName">Last Name</label><span class="red">*<small></small></span><br>
+
+                        <input type="text" id="lastName" name="lastName" placeholder="lastname" required/><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="employeeId">Employee ID</label><span class="red">*<small></small></span><br>
+
+                        <input type="text" id="employeeId" name="employeeId" placeholder="id" required/><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mobileNum">Contact</label><span class="red">*<small></small></span><br>
+                        <input type="number" id="mobileNum" name="mobileNum" placeholder="contact" class="form-control" autocomplete="off" /><br>
+                        <div id="mobilecheck"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="jobTitle">Job Title</label><span class="red">*<small></small></span><br>
+                        <input type="text" id="jobTitle" name="jobTitle" placeholder="jobtitle" required/><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dateofjoin">Date of joining</label><br>
+                        <input type="date" id="date" name="date" /><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="deptName">Dept Name</label><br>
+                        <select>
+            <option value="cb0001" >Choose</option>
+            <option value="cb0001" >UI Developer</option>
+            <option value="cb0001" >Buisness Analyst </option>
+            <option value="cb0001" >Marketing</option>
+        </select>
+                        <p type="text" id="deptName" name="deptName"></p><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="companyId">Company Branch</label><br>
+                        <input type="text" id="companyBranchId" name="companyBranchId" placeholder="branchid" /><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address">Address</label><br>
+                        <textarea type="text" id="addressDescription1" name="adress" placeholder="current address" required=""></textarea><br>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="state">State</label><br>
+                        <select>
+                <option >Choose</option>
+                <option >Karnataka</option>
+                <option >Kerala </option>
+                <option >Maharashtra</option>
+                <option >TamilNadu</option>
+                <option >Delhi</option>
+            </select>
+                        <p type="text" id="state" name="state"></p><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="location">Location</label><br>
+                        <input type="text" id="location" name="location" /><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="city">City</label><br>
+                        <select>
+                <option >Choose</option>
+                <option >Bangalore</option>
+                <option >Pune </option>
+                <option >Mumbai</option>
+                <option >Chennai</option>
+                <option >Cochin</option>
+            </select>
+                        <p type="text" id="city" name="city"></p><br>
+                    </div>
+
+
+
+                    <div class="mb-3">
+                        <label for="country">Country</label><br>
+                        <input type="country" id="country" name="country" /><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pincode">Pincode</label><br>
+                        <input type="number" id="pinCode" name="pinCode" /><br>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="pincode">Active</label><br>
+                        <input type="text" id="isActive" name="isActive" required /><br>
+                    </div>
+
+
+                </form>
+                <button class="btn btn-danger" id="submit" type="submit" onclick="addData()">Save Employee</button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+    <script src="post.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+</body>
+
+</html>

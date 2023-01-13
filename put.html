@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+    <script src="edit.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Edit Page</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html" onclick="getData()">Our Employee</a></li>
+        <li><a href="add.html">New User</a></li>
+    </ul>
+
+    <div id="editData" class="container mt-5">
+        <script id="editDataTmpl" type="text/template">
+            <h2>Edit Employee Details</h2>
+            <form id="form">
+                <label for="createdBy">Created by:</label><br />
+                <input type="text" id="createdBy" name="createdBy" value="<%= employeeData.createdBy %>" /><br />
+                <label for="updatedBy">Updated By:</label><br />
+                <input type="text" id="updatedBy" name="updatedBy" value="<%= employeeData.updatedBy %>" /><br />
+                <label for="firstName">First Name:</label><br />
+                <input type="text" id="firstName" name="firstName" value="<%= employeeData.firstName %>" /><br />
+                <label for="lastName">Last Name:</label><br />
+                <input type="text" id="lastName" name="lastName" value="<%= employeeData.lastName %>" /><br />
+                <label for="employeeId">Employee ID:</label><br />
+                <input type="number" id="employeeId" name="employeeId" value="<%= employeeData.employeeId %>" /><br />
+                <label for="mobileNum">Mobile No:</label><br />
+                <input type="number" id="mobileNum" name="mobileNum" maxlength="10" value="<%= employeeData.mobileNum %>" /><br />
+                <label for="jobTitle">Job Title:</label><br />
+                <input type="text" id="jobTitle" name="jobTitle" value="<%= employeeData.jobTitle %>" /><br />
+                <label for="deptName">Dept Name:</label><br />
+                <input type="text" id="deptName" name="deptName" value="<%= employeeData.deptName %>" /><br />
+                <label for="companyBranchId">Company Branch ID:</label><br />
+                <input type="text" id="companyBranchId" name="companyBranchId" value="<%= employeeData.companyBranchId %>" /><br />
+                <label for="addressDescription1">Address:</label><br />
+                <input type="text" id="addressDescription1" name="address" value="<%= employeeData.addressDescription1 %>" /><br />
+                <label for="location">Location:</label><br />
+                <input type="text" id="location" name="location" value="<%= employeeData.location %>" /><br />
+                <label for="city">City</label><br />
+                <input type="text" id="city" name="city" value="<%= employeeData.city %>" /><br />
+                <label for="state">State</label><br />
+                <input type="text" id="state" name="state" value="<%= employeeData.state %>" /><br />
+                <label for="country">Country:</label><br />
+                <input type="text" id="country" name="country" value="<%= employeeData.country %>" /><br />
+                <label for="pinCode">PinCode:</label><br />
+                <input type="text" id="pinCode" name="pincode" value="<%= employeeData.pinCode %>" /><br />
+                <label for="isActive">isActive</label><br />
+                <input type="text" id="isActive" name="isActive" value="<%= employeeData.isActive %>" /><br />
+            </form>
+            <button onclick="onUpdate()">Update Employee</button>
+        </script>
+    </div>
+
+</body>
+
+</html>

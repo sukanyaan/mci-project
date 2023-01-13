@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+    <script src="underscoreImp.js"></script>
+    <title>Employee</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html" onclick="getData()">Our Employee</a></li>
+        <li><a href="add.html">New User</a></li>
+    </ul>
+    <br />
+
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col-lg-18">
+                <h1 style="background-color: rgb(245, 247, 249)">Employee Details</h1>
+                <br />
+                <div id="listContainer">
+                    <script id="listTmpl" type="text/template">
+                        <table class="table table-bordered table-bordered table-sm table-hover text-center">
+                            <thead>
+                                <tr class="text-primary" id="table">
+                                    <thead>
+                                        <tr class="text-primary table-light">
+                                            <th>Id</th>
+                                            <th>Employee First Name</th>
+                                            <th>Employee Last Name</th>
+                                            <th>Employee Contact</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <% for (var i = 0; i < employee.length; i++) { %>
+                                            <tr>
+                                                <td>
+                                                    <%= employee[i].id %>
+                                                </td>
+                                                <td>
+                                                    <%= employee[i].firstName %>
+                                                </td>
+                                                <td>
+                                                    <%= employee[i].lastName %>
+                                                </td>
+                                                <td>
+                                                    <%= employee[i].mobileNum %>
+                                                </td>
+                                                <td>
+                                                    <button class='btn btn-warning' type="button" value="Edit" onclick="editEmployee('<%= employee[i].id %>')">Edit</button>
+
+                                                </td>
+                                                <td><button class='btn btn-danger' type="button" value="Delete" onclick="deleteEmployee('<%= employee[i].id %>', '<%= employee[i].updatedBy %>')">X</button>
+                                                </td>
+                                            </tr>
+                                            <%   } %>
+
+                                    </tbody>
+                        </table>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <footer></footer>
+
+    <div class="text-box"></div>
+    <br><br><br>
+    <div class="text-box">
+
+        <h1>welcome back</h1>
+    </div>
+</body>
+
+</html>

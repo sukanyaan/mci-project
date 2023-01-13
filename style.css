@@ -1,0 +1,65 @@
+body {
+    background: url("mirror.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 120%;
+}
+
+ul {
+    margin: 0px;
+    background-color: rgb(13, 13, 14);
+}
+
+ul li {
+    display: inline-block;
+    padding: 18px;
+}
+
+ul li a:hover {
+    color: rgb(230, 32, 200);
+}
+
+ul li a {
+    color: rgb(251, 253, 252);
+    text-decoration: none;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+    font-size: 40px;
+    color: aliceblue;
+}
+
+footer {
+    background: rgb(248, 140, 63);
+    color: white;
+    padding: 0px;
+    text-align: center;
+    border-radius: 0px;
+    font-size: x-large;
+    padding-bottom: 0%;
+    position: sticky;
+}
+
+.red {
+    color: red;
+}
+
+.text-box h1 {
+    font-size: 130px;
+    line-height: 100px;
+    margin-left: -1px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(11, 0, 0);
+    background: url("back.png");
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
